@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="default_elevation">8dp</dimen>
+    <dimen name="color_chooser_width">64dp</dimen>
+    <dimen name="color_chooser_height">40dp</dimen>
+</resources>

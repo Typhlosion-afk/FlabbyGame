@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="GameView">
+        <attr name="bird_color" format="color"/>
+        <attr name="column_color" format="color"/>
+        <attr name="background_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="GamePreview">
+        <attr name="bird_color_review" format="color"/>
+        <attr name="column_color_review" format="color"/>
+        <attr name="background_color_review" format="color"/>
+    </declare-styleable>
+</resources>

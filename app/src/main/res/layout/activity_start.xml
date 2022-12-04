@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.activity.StartActivity">
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:elevation="@dimen/default_elevation"
+        android:id="@+id/toggle_music"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginVertical="24dp"
+        android:layout_marginHorizontal="36dp"
+        android:background="@drawable/music_toggle"
+        android:textOn=""
+        android:textOff=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sound"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/toggle_sound"
+        app:layout_constraintStart_toStartOf="@+id/toggle_sound"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_sound"
+        tools:ignore="SmallSp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/music"
+        android:fontFamily="@font/nunito_bold"
+        android:textColor="@color/black"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/toggle_music"
+        app:layout_constraintStart_toStartOf="@+id/toggle_music"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_music"
+        tools:ignore="SmallSp" />
+
+    <androidx.appcompat.widget.AppCompatToggleButton
+        android:id="@+id/toggle_sound"
+        android:elevation="@dimen/default_elevation"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginVertical="24dp"
+        android:layout_marginHorizontal="36dp"
+        android:background="@drawable/sound_toggle"
+        android:textOn=""
+        android:textOff=""
+        app:layout_constraintEnd_toStartOf="@+id/toggle_music"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginVertical="20dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:layout_editor_absoluteX="40dp">
+
+        <com.example.flabbygame.customview.PreviewView
+            android:id="@+id/game_preview"
+            android:layout_width="match_parent"
+            android:transitionName="preview"
+            android:layout_height="200dp"
+            app:background_color_review="@color/background"
+            app:bird_color_review="@color/bird"
+            app:column_color_review="@color/column"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/color_chooser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/card">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_color_1"
+            android:layout_width="@dimen/color_chooser_width"
+            android:layout_height="@dimen/color_chooser_height"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/column1" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_color_2"
+            android:layout_width="@dimen/color_chooser_width"
+            android:layout_height="@dimen/color_chooser_height"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/column2" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_color_3"
+            android:layout_width="@dimen/color_chooser_width"
+            android:layout_height="@dimen/color_chooser_height"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/column3" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_color_4"
+            android:layout_width="@dimen/color_chooser_width"
+            android:layout_height="@dimen/color_chooser_height"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/column4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/color_chooser_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/color_chooser">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_color_5"
+            android:layout_width="@dimen/color_chooser_width"
+            android:layout_height="@dimen/color_chooser_height"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/column5" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_color_6"
+            android:layout_width="@dimen/color_chooser_width"
+            android:layout_height="@dimen/color_chooser_height"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/column6" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_color_7"
+            android:layout_width="@dimen/color_chooser_width"
+            android:layout_height="@dimen/color_chooser_height"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/column7" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_color_8"
+            android:layout_width="@dimen/color_chooser_width"
+            android:layout_height="@dimen/color_chooser_height"
+            android:layout_marginHorizontal="5dp"
+            android:background="@color/column8" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/best_score_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/color_chooser_2">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="@string/best_score_preview"
+            android:textColor="@color/gray"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/color_chooser" />
+
+        <TextView
+            android:id="@+id/best_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:textColor="@color/gray"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView3"
+            app:layout_constraintStart_toStartOf="@+id/textView3"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/txt_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="80dp"
+        android:padding="20dp"
+        android:text="@string/play"
+        android:textColor="@color/gray"
+        android:fontFamily="@font/nunito_bold"
+        android:elevation="8dp"
+        android:textSize="42sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
