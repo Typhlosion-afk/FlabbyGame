@@ -314,7 +314,7 @@ class MainActivity : AppCompatActivity(), SurfaceHolder.Callback {
         binding.gameView.setBirdIsAlive(false)
         gameOverFragment.arguments = bundleOf(KEY_SCORE to userPoint)
         supportFragmentManager.beginTransaction()
-            .add(binding.overlayView.id, gameOverFragment, null)
+            .replace(binding.overlayView.id, gameOverFragment, null)
             .commit()
 
         calculatorJob?.cancel()
